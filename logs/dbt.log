@@ -27,3 +27,18 @@ Happy modeling!
 [0m12:14:18.574540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B30A4A8E30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B309300950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B309300050>]}
 [0m12:14:18.576537 [debug] [MainThread]: Flushing usage events
 [0m12:14:19.680646 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:44:22.661337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC301A6810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC31D6D9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC32CDBE30>]}
+
+
+============================== 10:44:22.678223 | 7335f6f4-f656-4883-a448-7041fd1820d0 ==============================
+[0m10:44:22.678223 [info ] [MainThread]: Running with dbt=1.10.1
+[0m10:44:22.680998 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\rafad\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt build', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m10:44:22.683612 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\rafad\Documents\Repositorios_Git\projeto_dbt_airflow\2_dw\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m10:44:22.688942 [debug] [MainThread]: Command `dbt build` failed at 10:44:22.687840 after 0.42 seconds
+[0m10:44:22.690865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC31D0C380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC331436E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AC301A6810>]}
+[0m10:44:22.692501 [debug] [MainThread]: Flushing usage events
+[0m10:44:23.619884 [debug] [MainThread]: An error was encountered while trying to flush usage events
