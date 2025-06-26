@@ -46,7 +46,7 @@ models:
           - not_null
       - name: etl_inserted_at
         description: "Timestamp de quando o dado foi carregado no modelo"
-  name: stg_pedidos_limit
+  - name: stg_pedidos_limit
     description: "Modelo staging para a tabela de pedidos. limitado a 5 linhas."
     columns:
       - name: id_pedido
