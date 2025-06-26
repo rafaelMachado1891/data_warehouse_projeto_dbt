@@ -25,24 +25,23 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml <<EOF
-          dw_dbt:
-            target: prod
-            outputs:
-              prod:
-                type: postgres
-                threads: 4
-                host: ${{ secrets.RENDER_DB_HOST }}
-                user: ${{ secrets.RENDER_DB_USER }}
-                pass: ${{ secrets.RENDER_DB_PASS }}
-                port: ${{ secrets.RENDER_DB_PORT }}
-                dbname: ${{ secrets.RENDER_DB_NAME }}
-                schema: public
-          EOF
+dw_dbt:
+  target: prod
+  outputs:
+    prod:
+      type: postgres
+      threads: 4
+      host: "${{ secrets.RENDER_DB_HOST }}"
+      user: "${{ secrets.RENDER_DB_USER }}"
+      pass: "${{ secrets.RENDER_DB_PASS }}"
+      port: "${{ secrets.RENDER_DB_PORT }}"
+      dbname: "${{ secrets.RENDER_DB_NAME }}"
+      schema: public
+EOF
 
       - name: dbt deps
         working-directory: dw_dbt
         run: dbt deps --profiles-dir ~/.dbt
-
 
       - name: dbt build
         working-directory: dw_dbt
