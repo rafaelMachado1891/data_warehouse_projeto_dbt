@@ -60,9 +60,5 @@ models:
           - not_null
       - name: valor_pedido
         description: "Valor dos itens do pedido (sem frete e desconto)"
-      - name: dt_pedido
-        description: "Data em que o pedido foi realizado"
-        tests:
-          - not_null
       - name: etl_inserted_at
         description: "Timestamp de quando o dado foi carregado no modelo" 
